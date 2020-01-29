@@ -270,12 +270,17 @@ function tallyUpDonations(/* CODE HERE */runners) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count;
+  let count = 0;
+  return function() {
+    return ++count;
   }
   // BROKEN CODE ENDS
 }
+console.log("### Challenge `counterMaker`");
+const newCounter = counterMaker();
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
 
 /**
  * ### Challenge `counterMakerWithLimit`
